@@ -8,6 +8,14 @@ module.exports = {
       else if (score < 70 && score >=60){grade = 'D'}
       else {grade ='F'} 
       return grade;
+    },
+
+    averageScore: function(array){
+      return array.reduce(function(a,b){return a + b;}) / array.length;
+    },
+
+    medianScore: function(array){
+      return (array.length % 2 !== 0) ? array[Math.floor(array.length/2)] : (array[array.length/2] + array[array.length/2 - 1]) / 2;
     }
 
 }
