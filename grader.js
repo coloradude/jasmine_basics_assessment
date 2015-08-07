@@ -15,7 +15,12 @@ module.exports = {
     },
 
     medianScore: function(array){
-      return (array.length % 2 !== 0) ? array[Math.floor(array.length/2)] : (array[array.length/2] + array[array.length/2 - 1]) / 2;
-    }
+      meanId = array.length / 2;
+      return (array.length % 2 !== 0) ? array[Math.floor(meanId)] : (array[meanId] + array[meanId - 1]) / 2;
+    },
+
+
+
+
 
 }
