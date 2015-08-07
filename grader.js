@@ -19,6 +19,14 @@ module.exports = {
       return (array.length % 2 !== 0) ? array[Math.floor(meanId)] : (array[meanId] + array[meanId - 1]) / 2;
     },
 
+    modeScore: function(array){
+      var occurenceCounter = [];
+      for (var i=0;i<array.length;i++){
+        occurenceCounter.push(array.filter(function(score){return score === array[i]}).length)
+      }
+      modeId = occurenceCounter.indexOf(Math.max.apply(Math, occurenceCounter));
+      return array[modeId];
+    }
 
 
 
