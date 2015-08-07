@@ -24,8 +24,7 @@ module.exports = {
       for (var i=0;i<array.length;i++){
         occurenceCounter.push(array.filter(function(score){return score === array[i]}).length)
       }
-      modeId = occurenceCounter.indexOf(Math.max.apply(Math, occurenceCounter));
-      return array[modeId];
+      return array[occurenceCounter.indexOf(Math.max.apply(Math, occurenceCounter))];
     }
 
 
